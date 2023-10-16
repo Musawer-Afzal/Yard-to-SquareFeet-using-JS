@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard to SquareFeet</title>
+</head>
+<body>
+
+    <h1>Yard to SquareFeet</h1>
+
+    <form onsubmit="convert(event)">
+        Enter the Area in Yard: <input type="number" id="yard" required step="0.1"><br>
+        <Button>Convert</Button>
+    </form>
+
+    <h1 id="resultWindow"></h1>
+
+    <script>
+        function convert(event){
+        event.preventDefault();
+        let AreaYard = document.querySelector("#yard").value;
+
+        console.log(AreaYard);
+
+        let AreaSquareFeet = Number(AreaYard) * 9;
+
+        document.querySelector("#resultWindow").innerHTML = AreaSquareFeet;
+    }
+    </script>
+</body>
+</html>
